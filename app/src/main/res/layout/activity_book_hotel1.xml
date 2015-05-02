@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context=".BookHotel1"
+    android:background="@drawable/light_blue1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:measureWithLargestChild="false"
+        android:longClickable="false">
+
+        <EditText
+            android:id="@+id/task_name"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Enter Name of the Hotel">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/search_by_name_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="searchByName"
+            android:text="Search by Name" />
+
+
+        <EditText
+            android:id="@+id/task_location"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Enter Location">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/search_by_location_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="searchByLocation"
+            android:text="Search by Location" />
+
+
+        <Button
+            android:id="@+id/search_by_name_and_location_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="searchByNameAndLocation"
+            android:text="List all Hotels" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Day in which booking is needed"
+            android:hint="Enter a day and select a Venue from below"/>
+
+        <EditText
+            android:id="@+id/task_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:visibility="visible"
+            android:textColorHint="@color/black_overlay">
+        </EditText>
+
+
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/task_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
